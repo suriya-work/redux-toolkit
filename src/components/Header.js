@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 //Mui
-import { Box, AppBar, Divider, Drawer, Button, Toolbar, List, ListItem, ListItemButton, ListItemText } from '@mui/material/';
+import { Box, AppBar, Divider, Drawer, Button, Toolbar, List, ListItem, ListItemButton, ListItemText, Grid } from '@mui/material/';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
@@ -40,7 +40,8 @@ const Header = (props) => {
     const container = window !== undefined ? () => window().document.body : undefined;
     return (
         <Box sx={{ display: 'flex' }}>
-            <AppBar sx={{ backgroundColor: "#081730" , boxShadow:"none" }}>
+
+            <AppBar sx={{ backgroundColor: "#081730", boxShadow: "none", padding: "20px" }}>
                 <Toolbar>
                     <IconButton
                         color="inherit"
@@ -51,17 +52,23 @@ const Header = (props) => {
                     >
                         <MenuIcon />
                     </IconButton>
-                        <img src={Logo} alt="LogoMenu" className={styles.img} />
-                    <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+                    <img src={Logo} alt="LogoMenu" className={styles.img} />
+                    <Box sx={{ margin: 'auto', display: { xs: 'none', sm: 'block' } }}>
                         {navItems.map((item) => (
-                            <Button key={item} sx={{ color: '#fff', margin: "15px" }}>
-                                {item}
-                            </Button>
-                           
+                            <>
+                                <Button key={item} sx={{ color: '#fff', fontSize: "12px", margin: "8px", textTransform: 'none' }}>
+                                    {item}
+                                </Button>
+
+                            </>
                         ))}
-                       
-                        
+                        <Button sx={{ textTransform: 'none', color: '#fff', borderRadius: '10px', fontSize: '12px', padding: '4px 18px', marginLeft: '10rem' }} variant="outlined">Log in</Button>
+                        <Button sx={{ textTransform: 'none', color: '#fff', borderRadius: '10px', fontSize: '12px', padding: '4px 18px', marginLeft: '10px' }}>Sign Up</Button>
+                        {/* <Grid> */}
+
+                        {/* </Grid> */}
                     </Box>
+
 
                 </Toolbar>
 
