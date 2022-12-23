@@ -2,7 +2,11 @@ import React from 'react';
 //MUI
 import { Grid, Box } from '@mui/material/';
 //Image
-import music from "../image/music.png";
+// import back from "../image/backgraphics.png";
+import mobile from "../image/p.png";
+import Pleyer from "../image/p 2.png";
+// import irpad from "../image/p 3.png";
+import haert from "../image/p 4.png";
 //Components
 import DownloadAds from './DownloadAds';
 
@@ -10,8 +14,8 @@ const Banner = () => {
     return (
         //Left Side
         <>
-            <Box sx={{ width: '100%', height: 'auto', backgroundColor: "#081730", paddingTop: "14rem" }}>
-                <Grid container sx={{ justifyContent: "space-around" }} >
+            <Box sx={{ width: '100%', height: '60rem', backgroundColor: "#081730", paddingTop: "14rem", position: 'relative', zIndex: '3' }}>
+                <Grid container sx={{ justifyContent: 'space-around' }}>
                     <Grid sx={{ height: '100%', display: { xs: '12', sm: '12', md: '6', xl: '6' } }} >
                         <Grid sx={{ color: '#fff', fontSize: '28px', lineHeight: '1.5' }}>
                             <span>Experience The</span>{" "}
@@ -30,21 +34,36 @@ const Banner = () => {
                             </span>
                         </Grid>
                         {/* //download  ads*/}
-                        <Grid sx={{ fontSize: '12px', paddingTop: '3rem' , color:'#fff' }}>
-                            <div>
+                        <Grid sx={{ fontSize: '12px', paddingTop: '3rem', color: '#fff' }}>
+                            <Grid>
                                 <span>Download now on IOS and Android</span>
                                 <DownloadAds />
-                            </div>
+                            </Grid>
                         </Grid>
 
                     </Grid>
-                    <Box>
+                    {/* {//Right Side} */}
+                    <Box sx={{ position: 'relative', width: '50%', top: '19rem' }}>
                         <Grid sx={{ display: { xs: '12', sm: '12', md: '6', xl: '6' } }}>
-                            <img src={music} alt="music icon" />
+                            {/* <Grid sx={{ position: 'absolute', top: '-8rem', left: '19rem' , backgroundSize:'cover' , background:'fixed' }}>
+                                <img src={back} alt="back icon" />
+                            </Grid> */}
+
+                            <Grid sx={{ height: '3rem', position: 'absolute', left: '14rem', top: '-24rem' }}>
+                                <img src={mobile} alt="mobile go" />
+                            </Grid>
+                            <Grid sx={{ position: 'absolute', left: '255px', top: '94px', width: '160px' }}>
+                                <img src={Pleyer} alt="Pleyer go" />
+                            </Grid>
+                            {/* <Grid sx={{ position: 'absolute', width: '.5rem', left: '11rem', top: '10rem' }}>
+                                <img src={irpad} alt="irpad go" />
+                            </Grid> */}
+                            <Grid sx={{ position: 'absolute', left: '6rem', top: '5.5rem' }}>
+                                <img src={haert} alt="haert go" />
+                            </Grid>
                         </Grid>
                     </Box>
                 </Grid>
-
             </Box>
 
         </>

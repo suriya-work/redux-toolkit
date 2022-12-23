@@ -1,14 +1,11 @@
-//Components
-import Header from "./components/Header";
-import Banner from "./components/Banner";
 //Style
 import  "./App.css";
+import DownloadAds from "./components/DownloadAds";
 
 function App() {
   return (
     <div>
-      <Header />
-      <Banner />
+     <DownloadAds />
      
     </div>
   );

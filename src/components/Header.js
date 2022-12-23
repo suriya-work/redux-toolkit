@@ -3,9 +3,6 @@ import React, { useState } from 'react';
 import { Box, AppBar, Divider, Drawer, Button, Toolbar, List, ListItem, ListItemButton, ListItemText, Grid } from '@mui/material/';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-
-//Components
-// import CenterMenu from './CenterMenu';
 //STYLES
 import styles from "./styles/Header.module.css";
 //IMAGES
@@ -28,7 +25,7 @@ const Header = (props) => {
             <Divider />
             <List>
                 {navItems.map((item) => (
-                    <ListItem key={item} disablePadding>
+                    <ListItem key={item} id={item} disablePadding>
                         <ListItemButton sx={{ textAlign: 'center' }}>
                             <ListItemText primary={item} />
                         </ListItemButton>
@@ -56,7 +53,7 @@ const Header = (props) => {
                     <Box sx={{ margin: 'auto', display: { xs: 'none', sm: 'block' } }}>
                         {navItems.map((item) => (
                             <>
-                                <Button key={item} sx={{ color: '#fff', fontSize: "12px", margin: "8px", textTransform: 'none' }}>
+                                <Button key={item} id={item} sx={{ color: '#fff', fontSize: "12px", margin: "8px", textTransform: 'none' }}>
                                     {item}
                                 </Button>
 
@@ -64,16 +61,10 @@ const Header = (props) => {
                         ))}
                         <Button sx={{ textTransform: 'none', color: '#fff', borderRadius: '10px', fontSize: '12px', padding: '4px 18px', marginLeft: '10rem' }} variant="outlined">Log in</Button>
                         <Button sx={{ textTransform: 'none', color: '#fff', borderRadius: '10px', fontSize: '12px', padding: '4px 18px', marginLeft: '10px' }}>Sign Up</Button>
-                        {/* <Grid> */}
-
-                        {/* </Grid> */}
                     </Box>
-
-
                 </Toolbar>
 
             </AppBar>
-            {/* <Box component="nav"> */}
             <Drawer
                 container={container}
                 variant="temporary"
@@ -90,7 +81,6 @@ const Header = (props) => {
                 {drawer}
             </Drawer>
         </Box>
-        // </Box>
 
     );
 };
