@@ -1,12 +1,11 @@
 //Style
 import  "./App.css";
-import DownloadAds from "./components/DownloadAds";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div>
-     <DownloadAds />
-     
+     <Header />
     </div>
   );
 }
