@@ -64,6 +64,10 @@ const Header = (props) => {
                         <Button sx={{ textTransform: 'none', color: '#fff', borderRadius: '10px', fontSize: '12px', padding: '4px 18px', marginLeft: '10px' }}>Sign Up</Button>
                         <Button sx={{ textTransform: 'none', color: '#fff', borderRadius: '10px', fontSize: '12px', padding: '4px 18px', marginLeft: '10px' }}>Sign Up</Button>
                         <Button sx={{ textTransform: 'none', color: '#fff', borderRadius: '10px', fontSize: '12px', padding: '4px 18px', marginLeft: '10px' }}>Sign Up</Button>
+                        <Button sx={{ textTransform: 'none', color: '#fff', borderRadius: '10px', fontSize: '12px', padding: '4px 18px', marginLeft: '10px' }}>Sign Up</Button>
+                        <Button sx={{ textTransform: 'none', color: '#fff', borderRadius: '10px', fontSize: '12px', padding: '4px 18px', marginLeft: '10px' }}>Sign Up</Button>
+                        <Button sx={{ textTransform: 'none', color: '#fff', borderRadius: '10px', fontSize: '12px', padding: '4px 18px', marginLeft: '10px' }}>Sign Up</Button>
+                        <Button sx={{ textTransform: 'none', color: '#fff', borderRadius: '10px', fontSize: '12px', padding: '4px 18px', marginLeft: '10px' }}>Sign Up</Button>
                     </Box>
                 </Toolbar>
 
