@@ -1,13 +1,23 @@
-//Style
-import  "./App.css";
-import Header from "./components/Header";
-
-function App() {
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { allRoute } from './routes/Routers';
+const App = () => {
   return (
     <div>
-     <Header />
+      <Routes>
+        {allRoute.map(({ path, component: Component }, index) => (
+          <Route
+            key={index}
+            path={path}
+            element={
+                <Component />
+            }
+          />
+        ))}
+      </Routes>
+
     </div>
   );
-}
+};
 
 export default App;
