@@ -9,6 +9,10 @@ const Header = () => {
            <div>
            <span></span>
            <span>vv</span>
+           <b></b>
+           <b></b>
+           <b></b>
+           <b>vv</b>
            </div>
         </div>
     );
