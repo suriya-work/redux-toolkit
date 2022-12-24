@@ -3,7 +3,6 @@
 // const ListCars = lazy(() => import("../page/ListCars"));
 import List from '../page/List';
 import ListCars from '../page/ListCars';
-
 export const  allRoute = [
     {
         path: '/',
