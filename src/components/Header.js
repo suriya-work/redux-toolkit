@@ -50,11 +50,29 @@ const Header = (props) => {
                         <MenuIcon />
                     </IconButton>
                     <img src={Logo} alt="LogoMenu" className={styles.img} />
-                    <img src={Logo} alt="LogoMenu" className={styles.img} />
-                    <img src={Logo} alt="LogoMenu" className={styles.img} />
-                    <img src={Logo} alt="LogoMenu" className={styles.img} />
-                    <img src={Logo} alt="LogoMenu" className={styles.img} />
-                   
+                    <Box sx={{ margin: 'auto', display: { xs: 'none', sm: 'block' } }}>
+                        {navItems.map((item) => (
+                            <>
+                                <Button key={item} id={item} sx={{ color: '#fff', fontSize: "12px", margin: "8px", textTransform: 'none' }}>
+                                    {item}
+                                </Button>
+
+                            </>
+                        ))}
+                        <Button sx={{ textTransform: 'none', color: '#fff', borderRadius: '10px', fontSize: '12px', padding: '4px 18px', marginLeft: '10rem' }} variant="outlined">Log in</Button>
+                        <Button sx={{ textTransform: 'none', color: '#fff', borderRadius: '10px', fontSize: '12px', padding: '4px 18px', marginLeft: '10px' }}>Sign Up</Button>
+                        <Button sx={{ textTransform: 'none', color: '#fff', borderRadius: '10px', fontSize: '12px', padding: '4px 18px', marginLeft: '10px' }}>Sign Up</Button>
+                        <Button sx={{ textTransform: 'none', color: '#fff', borderRadius: '10px', fontSize: '12px', padding: '4px 18px', marginLeft: '10px' }}>Sign Up</Button>
+                        <Button sx={{ textTransform: 'none', color: '#fff', borderRadius: '10px', fontSize: '12px', padding: '4px 18px', marginLeft: '10px' }}>Sign Up</Button>
+                        <Button sx={{ textTransform: 'none', color: '#fff', borderRadius: '10px', fontSize: '12px', padding: '4px 18px', marginLeft: '10px' }}>Sign Up</Button>
+                        <Button sx={{ textTransform: 'none', color: '#fff', borderRadius: '10px', fontSize: '12px', padding: '4px 18px', marginLeft: '10px' }}>Sign Up</Button>
+                        <Button sx={{ textTransform: 'none', color: '#fff', borderRadius: '10px', fontSize: '12px', padding: '4px 18px', marginLeft: '10px' }}>Sign Up</Button>
+                        <Button sx={{ textTransform: 'none', color: '#fff', borderRadius: '10px', fontSize: '12px', padding: '4px 18px', marginLeft: '10px' }}>Sign Up</Button>
+                        <Button sx={{ textTransform: 'none', color: '#fff', borderRadius: '10px', fontSize: '12px', padding: '4px 18px', marginLeft: '10px' }}>Sign Up</Button>
+                        <Button sx={{ textTransform: 'none', color: '#fff', borderRadius: '10px', fontSize: '12px', padding: '4px 18px', marginLeft: '10px' }}>Sign Up</Button>
+                        <Button sx={{ textTransform: 'none', color: '#fff', borderRadius: '10px', fontSize: '12px', padding: '4px 18px', marginLeft: '10px' }}>Sign Up</Button>
+                        <Button sx={{ textTransform: 'none', color: '#fff', borderRadius: '10px', fontSize: '12px', padding: '4px 18px', marginLeft: '10px' }}>Sign Up</Button>
+                    </Box>
                 </Toolbar>
 
             </AppBar>
@@ -74,6 +92,9 @@ const Header = (props) => {
                     '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
                 }}
             >
+                {drawer}
+                {drawer}
+                {drawer}
                 {drawer}
             </Drawer>
         </Box>
