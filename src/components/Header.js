@@ -7,9 +7,9 @@ const Header = () => {
             <h1>Sala,</h1>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem libero minima </p>
            <div>
-            <p></p>
-            <p></p>
-            <p></p>
+            <p>lg</p>
+            <p>ls</p>
+            <p>jgh</p>
            </div>
         </div>
     );
