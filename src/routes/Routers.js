@@ -5,7 +5,7 @@ import List from '../page/List';
 import ListCars from '../page/ListCars';
 export const  allRoute = [
     {
-        path: '/',
+        path: "/",
         component: List,
         
     },
@@ -13,4 +13,6 @@ export const  allRoute = [
         path:"/add-cart",
         component:ListCars,
     },
+
 ]
+   
