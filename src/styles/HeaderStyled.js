@@ -1,16 +1,32 @@
 import { styled } from "@mui/material/styles";
-import { Typography } from "@mui/material";
-export const MyHeader = styled('div')({
-    backgroundColor: '#000',
-    with: '100%',
-    height: '50px',
+import { Box, List, ListItem, Typography } from "@mui/material";
+export const MyHeader = styled(Box)({
     display: 'flex',
-    textAlign: 'center',
-    alignItems: 'center',
-    padding: '25px'
+    height: 50,
+    backgroundColor: '#000',
 })
 export const Text = styled(Typography)({
+    display: 'flex',
     color: '#fff',
-    fontSize: '26px',
+    alignItems: 'center',
+    fontSize: 22,
     fontWeight: 'bold',
+    padding: 25
 })
+
+export const Lists = styled(List)({
+    display: 'flex',
+    margin: '5rem'
+
+})
+
+export const ListItems = styled(ListItem)({
+    fontSize: '18px',
+    fontWeight: 'bold',
+    color: '#fff',
+
+
+
+})
+
+
