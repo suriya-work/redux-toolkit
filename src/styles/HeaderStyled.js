@@ -24,9 +24,6 @@ export const ListItems = styled(ListItem)({
     fontSize: '18px',
     fontWeight: 'bold',
     color: '#fff',
-
-
-
 })
 
 
