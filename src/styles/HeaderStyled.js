@@ -1,29 +1,35 @@
 import { styled } from "@mui/material/styles";
-import { Box, List, ListItem, Typography } from "@mui/material";
+import { Box, colors, Typography } from "@mui/material";
 export const MyHeader = styled(Box)({
     display: 'flex',
-    height: 50,
-    backgroundColor: '#000',
-})
-export const Text = styled(Typography)({
-    display: 'flex',
-    color: '#fff',
     alignItems: 'center',
-    fontSize: 22,
-    fontWeight: 'bold',
-    padding: 25
+    justifyContent: 'space-between',
+    width: '100%',
+    height: 60,
+    backgroundColor: '#000',
+    padding: '0 4rem',
 })
 
-export const Lists = styled(List)({
+export const Span = styled(Box)({
     display: 'flex',
-    margin: '5rem'
-
+    alignItems: 'center',
 })
 
-export const ListItems = styled(ListItem)({
-    fontSize: '18px',
-    fontWeight: 'bold',
-    color: '#fff',
+export const Number = styled(Typography)({
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '25px',
+    width: '25px',
+    borderRadius: '50%',
+    backgroundColor: 'yellow',
+    color: '#000',
+    fontSize:'14px',
+    fontWeight:'700',
+    marginRight:'5px'
 })
+
+
+
 
 
