@@ -5,12 +5,14 @@ import './App.css';
 import Header from './components/Header';
 import Cart from './components/Cart';
 import Home from './components/Home';
+import NotFound from './components/NotFound';
 const App = () => {
   return (
     <div>
       <Header />
       <Routes>
         <Route path="/cart" element={<Cart />} />
+        <Route path="/not-found" element={<NotFound />} />
         <Route path="/" element={<Home />} />
       </Routes>
     </div>
