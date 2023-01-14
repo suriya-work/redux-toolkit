@@ -1,12 +1,13 @@
 import React from 'react';
-import { notFound } from '../styles/NotFoundStyle';
+import { NotError } from '../styles/NotFoundStyle';
+
 
 const NotFound = () => {
     return (
-        <notFound>
-            <h2>404</h2>
-            <p>نتیجه ای یافت نشد</p>
-        </notFound>
+        <NotError>
+            <h2 style={{ fontSize: '55px' }}>404</h2>
+            <p style={{ fontSize: '40px' }}>نتیجه ای یافت نشد</p>
+        </NotError>
     );
 };
 
