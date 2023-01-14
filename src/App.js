@@ -10,11 +10,14 @@ const App = () => {
   return (
     <div>
       <Header />
+
       <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path='*' element={<Navigate to="/not-found" />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/not-found" element={<NotFound />} />
-        <Route path="/" element={<Home />} />
       </Routes>
+
     </div>
   );
 };
