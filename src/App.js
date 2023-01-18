@@ -6,17 +6,20 @@ import Header from './components/Header';
 import Cart from './components/Cart';
 import Home from './components/Home';
 import NotFound from './components/NotFound';
+import { ThemeProvider } from '@mui/system';
+import theme from './styles/theme';
 const App = () => {
   return (
     <div>
-      <Header />
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path='*' element={<Navigate to="/not-found" />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/not-found" element={<NotFound />} />
-      </Routes>
+      <ThemeProvider theme={theme}>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path='*' element={<Navigate to="/not-found" />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/not-found" element={<NotFound />} />
+        </Routes>
+      </ThemeProvider>
 
     </div>
   );
