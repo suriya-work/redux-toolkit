@@ -1,25 +1,39 @@
-import { createSlice } from "@reduxjs/toolkit";
-
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
 
 const initialState = {
-    cartItems: localStorage.getItem("cartItems")
-        ? JSON.parse(localStorage.getItem("cartItems"))
-        : [],
-    cartTotalQuontity: 0,
-    cartTotalAmount: 0,
+    items: [],
+    status: null,
 }
-
-
-const cartSlice = createSlice({
-    name: "cart",
-    initialState,
-    reducers: {
-        addToCart(state, action) {
-            state.cartItems.push(action.payload);
+export const cartsFetch = createAsyncThunk(
+    "carts/cartsFetch",
+    async () => {
+        try {
+            const response = await axios.get("https://fakestoreapi.com")
+            return response.data
+        } catch (error) {
+            console.log(error)
         }
 
     }
+)
+
+const cartSlice = createSlice({
+    name: "carts",
+    initialState,
+    reducers: {},
+    extraReducers: {
+        [cartsFetch.pending]: (state, action) => {
+            state.status = "pending";
+        },
+        [cartsFetch.fulfilled]: (state, action) => {
+            state.items = action.payload;
+            state.status = "success"
+        },
+        [cartsFetch.rejected]: (state, action) => {
+            state.status = "rejected"
+        },
+    }
 })
 
-export const { addToCart } = cartSlice.actions;
 export default cartSlice.reducer;
